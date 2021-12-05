@@ -11,11 +11,9 @@ def solve(data, f=None):
         if f and f(p1, p2):
             continue
         (x1, y1), (x2, y2) = p1, p2
-        xdiff = x2 - x1
-        ydiff = y2 - y1
+        xdiff, ydiff = x2 - x1, y2 - y1
         length = max(abs(xdiff), abs(ydiff))
-        xstep = xdiff // length
-        ystep = ydiff // length
+        xstep, ystep = xdiff // length, ydiff // length
 
         for idx in range(length + 1):
             vents[(x1 + idx * xstep, y1 + idx * ystep)] += 1
