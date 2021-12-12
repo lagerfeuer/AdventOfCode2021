@@ -1,4 +1,7 @@
 # Advent of Code
+output
+output.*
+ref.*
 template/
 test.txt
 test_*.txt
